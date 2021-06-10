@@ -32,7 +32,9 @@ export default class ApiService {
     return this.searchQuery;
   }
 
-  set query(value) {
-    this.searchQuery = value;
+  // set query(value) {
+  //   this.searchQuery = value;
+  set query(newQuery) {
+    this.searchQuery = newQuery;
   }
 }
