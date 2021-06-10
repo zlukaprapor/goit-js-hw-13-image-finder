@@ -32,20 +32,19 @@ async function fetch() {
 }
 
 function onLoadMore() {
-  fetch();
+  fetch().then;
   onScroll();
 }
 
 function onSearch(e) {
   e.preventDefault();
   fetchService.query = e.target.elements.query.value;
-
+  clearContainer();
   if (!fetchService.query) {
-    clearContainer();
+    // clearContainer();
     return;
   }
 
-  clearContainer();
   fetch();
 }
 
